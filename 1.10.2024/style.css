@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+
+}
+body{
+
+    display:flex;
+}
+.sidebar{
+
+    position:sticky;
+    top:0;
+    left:0;
+    bottom:0;
+    width:140px;
+    height:100vh;
+    padding:0 1.7rem;
+    background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
+    color:#fff;
+    overflow: hidden;
+    transition: all 0.5s linear ;
+}
+
+.sidebar:hover{
+    width:280px;
+    transition: 0.5s;
+
+}
+
+.logo{
+    height:80px;
+    padding:16px;
+}
+.menu{
+    height:88%;
+    position:relative;
+    list-style:none;
+    padding:0;
+
+}
+
+
+
+
+.menu li{
+   padding:1rem;
+   margin:8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+
+}
+.menu li:hover,.active{
+    background:#e0e0e058;
+}
+.menu a{
+    color:#fff;
+    text-decoration:none ;
+    display:flex;
+   align-items: center;
+   gap:1.5rem;
+   font-size: 14px;
+
+}
+.menu a span{
+    overflow: hidden;
+    font-family: "Noto Serif", serif;
+
+}
+.menu a i{
+    font-size:1.2rem;
+}
+.logout{
+    position: absolute;  
+    bottom:-560px;
+    left:0;
+    width:100%;
+  
+    
+}
+/***************************header sectio*****************************/
+.main-header{
+    width:100%;
+    position:relative;
+    background: rgb(208, 248, 208);
+    padding:1rem;
+}
+.header-wrapper img{
+    width:50px;
+    height:50px;
+    border-radius:50% ;
+}
+
+.header-wrapper{
+    display:flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ background: #fff;
+ padding:20px 2rem;
+ border-radius:10px;
+ margin-bottom:1rem;
+}
+.header-tittle{
+    color:rgb(125, 109, 243);
+    font-family: "Oswald", sans-serif;
+}
+.user-info{
+    display:flex;
+    align-items: center;
+   gap:1rem;
+}
+
+
+.search-box{
+    background:rgb(237,237,237);
+    border-radius: 20px;
+    color:rgba(113, 99, 186, 255);
+    display:flex;
+    align-items: center;
+    gap:5px;
+    padding:4px 24px;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+
+}
+.search-box input{
+    background: transparent;
+    border:none;
+    padding:10px;
+}
+.search-box i{
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    float:left;
+}
+.search-box i:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+/**********************card*****************************/
+.card-container{
+ 
+   background:#fff ;
+   padding:2rem;
+   border-radius:10px ;
+
+}
+.card-wrapper{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+
+}
+
+
+.main-title{
+    font-size:20px ;
+    color:rgb(125, 109, 243);
+    padding-bottom: 10px;
+    font-family: "Noto Serif", serif;
+}
+.payment-card{
+    background: #d3d0d0;
+    padding:1.2rem;
+    border-radius:10px ;
+    width:240px;
+    height:190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.payment-card:hover{
+transform:translateY(-5px) ;
+}
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+
+}
+.amount{
+    display: flex;
+    flex-direction:column ;
+}
+.title{
+    font-size:18px ;
+    font-weight: 200;
+    color:#fff;
+    font-family: "Spectral", serif;
+}
+.amount-value{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    color:#fff;
+}
+.icon{
+    color:red;
+    padding:1rem;
+    font-size:1.5rem ;
+    width:60px;
+    height:60px;
+    border-radius:50% ;
+    background-color:#fcfafa;
+   text-align: center;
+   
+}
+.card-detail{
+    color:#fcf8f8;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/***********************color  css**********************************/
+.light-red{
+    background-image: linear-gradient( 109.6deg,  rgba(217,67,67,1) 11.2%, rgba(242,106,75,1) 100.6% );
+}
+.light-green{
+    background-image: radial-gradient( circle 935px at 3.1% 5.8%,  rgba(182,255,139,1) 0%, rgba(8,88,127,1) 100.2% );
+    }
+.light-purple{
+    background-image: linear-gradient( 109.6deg,  rgba(228,107,232,1) 11.2%, rgba(87,27,226,1) 96.7% );
+        }
+ .light-blue{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,232,51,1) 0%, rgba(250,196,59,1) 100.2% );
+            }    
+.dark-red{
+    color:rgb(240, 7, 7);
+}   
+.dark-green{
+    color:rgb(132, 252, 12) ;
+} 
+.dark-purple{
+    color:rgb(150, 5, 148) ;
+} 
+.dark-blue{
+    color: rgba(249,232,51,1);
+}         
+/*****************************table*************************************/
+.table--wrapper{
+    background:#fff ;
+    margin-top: 1rem;
+    padding:2rem;
+    border-radius: 12px;
+
+}
+.main--heading{
+    font-size:20px ;
+    color:rgb(125, 109, 243);
+    padding-bottom: 10px;
+    font-family: "Noto Serif", serif;
+
+}
+.table-container{
+    width:100%;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+
+}
+thead{
+    background: rgba(113,99,186,255);
+    color:#fff;
+   
+}
+th{
+    padding:15px;
+    font-family: "Spectral", serif;
+    
+
+   
+}
+tbody{
+    background: #ffffff;
+}
+td{
+    padding:15px;
+    font-size:19px;
+    color:#333;
+    font-family: "EB Garamond", serif;
+
+
+}
+tr:nth-child(even){
+    background: #a9e2f5;
+
+}
+tfoot{
+    background:  rgba(113,99,186,255);
+    font-weight:bold;
+    color:#fff;
+}
+tfoot td{
+    padding:15px;
+    color:#fff;
+}
+.table-container button{
+    color:rgb(14, 241, 14);
+    cursor: pointer;
+    background: none;
+
+
+}
+.wrong,.wrong1{
+    color:rgb(247, 7, 7);
+}
+.syb,.syb1{
+    color:rgb(4, 150, 4);
+    font-size: 15px;;
+}
+.d1,.d2{
+    color:#6fc8e6
+}
